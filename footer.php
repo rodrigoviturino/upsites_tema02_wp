@@ -1,278 +1,139 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <div class="row wrapper">
+        <div class="row footer-wrapper">
+            <div class="col-md-6">
 
-            <!-- About Logo -->
-            <div class="footer__logo col-md-3 d-flex align-items-center flex-column justify-content-center">
-                <!-- Logo -->
-                <a href="<?php bloginfo('url'); ?>">
-                    <?php
-                        if( function_exists ('the_custom_logo') ) {
-                            the_custom_logo();
-                        }
-                    ?>
-                </a>
-                <!-- end Logo -->
+                <div class="footer-wrapper-about">
+                    <a href="#" class="logo">
+                        <img src="<?php echo get_template_directory_uri(); ?> /public/images/withe_logo.png" alt="">
+                    </a>
+                    <p class="text">Dolor sitam consectetur adipisicing eiusmod tempor cididunt laboret mag magn aliquat enim sed minim veniam nostrud sed lorem ipsum dolor.</p>
+                    <p class="adress">
+                        206 South Marion Avenue, Sanford <br>
+                        Florida 33020, USA
+                    </p>
+                    <ul class="footer-wrapper-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            Ligue Para (11) 1234-5678
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            contato@upsites.digital
+                        </li>
+                    </ul>
+                    <a href="#" class="footer-wrapper-about-btn"><i class="fas fa-user-tie"></i> Solicitar Orçamento</a>
+                </div>
 
-                <!-- Rede Social -->
-                <ul class="list-rede-social list-unstyled">
-                    <li>
-                        <?php if(get_theme_mod('up_facebook') ) : ?>
-                            <a href="<?php echo get_theme_mod('up_facebook'); ?>">
-                                <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <div class="col-md-3 col-lg-2 offset-lg-1">
+                <div class="footer-wrapper-menu">
+
+                    <div class="block-menu">
+                        <h4 class="title">Medical Center</h4>
+                        <?php 
+                            if( has_nav_menu('footer-menu') ) {
+                                wp_nav_menu(array(
+                                    'theme_location' => 'footer-menu',
+                                    'fallback_cb' => false,
+                                    'container_class' => null,
+                                    'container_id' => 'navbarResponsive',
+                                    'menu_class' => 'navbar-nav'
+                                ));
+                            }
+                        ?>
+                        
+                    </div>
+
+                    <div class="block-hours">
+                        <h4 class="title">Opening Hours</h4>
+                        <p class="text">Seg à Sex:</p>
+                        <p class="text">08:00 às 18:00</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="footer-wrapper-feed">
+                    <h4 class="title">Insta Feed</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
                             </a>
-                        <?php endif; ?>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                        <?php if(get_theme_mod('up_twitter') ) : ?>
-                            <a href="<?php echo get_theme_mod('up_twitter'); ?>">
+                <div class="footer-wrapper-redesocial">
+                    <h4 class="title">Insta Feed</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                        <?php endif;?>
-                        
-                        <?php if( get_theme_mod('up_linkedin') ) : ?>
-                            <a href="<?php echo get_theme_mod('up_linkedin'); ?>">
-                                <i class="fab fa-linkedin-in"></i>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
                             </a>
-                        <?php endif; ?>
-
-                        <?php if( get_theme_mod('up_instagram') ) : ?>
-                            <a href="<?php echo get_theme_mod('up_instagram'); ?>">
-                                <i class="fab fa-instagram"></i>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
                             </a>
-                        <?php endif; ?>
-
-                    </li>
-                </ul>
-                <!-- end Rede Social -->
-
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- end About Logo -->
-
-            <!-- Menu -->
-            <div class="footer__menu col-md-2">
-
-                <?php if(get_theme_mod('up_title_menu') ) : ?>
-                    <h3 class="title"> <?php echo get_theme_mod('up_title_menu'); ?> </h3>     
-                <?php endif; ?>
-                
-                <?php
-                        if( has_nav_menu('main-menu') ) {
-                            wp_nav_menu([
-                                'theme_location' => 'footer-menu',
-                                'fallback_cb' => false,
-                                'container_class' => null,
-                                'container_id' => 'navbarResponsive',
-                                'menu_class' => 'navbar list-unstyled'
-                            ]);
-                        }
-                    ?>
-
-                <!-- <ul class="list-unstyled">
-                    <li>
-                        <a href="#">
-                            About        
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Our Story
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Terms of Use
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Privacy Policy
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul> -->
-
-            </div>
-            <!-- end Menu -->
-
-            <!-- Courses -->
-            <div class="footer__courses col-md-2">
-
-                <?php if(get_theme_mod('up_title_courses') ) : ?>
-                    <h3 class="title">
-                        <?php echo get_theme_mod('up_title_courses'); ?>
-                    </h3>
-                <?php endif; ?>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#">
-                            Painting        
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Sketch
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Drawubg
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Sculpture
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Digital
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Lorem
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- end Courses -->
-
-            <!-- Topics -->
-            <div class="footer__topics col-md-2">
-                <?php if(get_theme_mod('up_title_topics') ) : ?>
-                    <h3 class="title"> 
-                        <?php echo get_theme_mod('up_title_topics'); ?> 
-                    </h3>     
-                <?php endif; ?>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#">
-                            Accreditation        
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Disclosures
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Student Code
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Job Opportunitties
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Campus Safety
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- end Topics -->
-
-            <!-- Infos -->
-            <div class="footer__info col-md-2">
-
-                <?php if(get_theme_mod('up_title_info') ) : ?>
-                    <h3 class="title"> 
-                        <?php echo get_theme_mod('up_title_info'); ?> 
-                    </h3>     
-                <?php endif; ?>             
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#">
-                            Prospective Student        
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Parents & Families
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Transfer Students
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Industry Leader
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Military Student
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- end Infos -->
 
         </div>
-    </div>
 
-    <section class="copyright">
-        <?php if(get_theme_mod('up_copyright') ) : ?>
-            <p> <?php echo get_theme_mod('up_copyright'); ?> <span class="company">Upsites</span>  - <?php echo Date('Y'); ?></p>
-        <?php endif; ?>
-    </section>
+        <div class="footer-copyright">
+            <p>&copy; Copyright 2020 - Upsites. All rights reserved.</p>
+        </div>
+    </div>
 
 </footer>
 <!-- end Footer -->
 
+
+
 <!-- Scripts -->
-    <script src=" <?php echo get_template_directory_uri() ?>'/node_modules/bootstrap/dist/js/bootstrap.min.js' "></script>
+<script src=" <?php echo get_template_directory_uri() ?>'/node_modules/bootstrap/dist/js/bootstrap.min.js' "></script>
 <!-- end Scripts -->
 <script>
 let menu = document.querySelector('.header');
@@ -290,6 +151,6 @@ window.addEventListener('scroll', () => {
 
 </script>
 
-
+<?php wp_footer(); ?>
 </body>
 </html>

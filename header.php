@@ -15,59 +15,166 @@
     
 <!-- Header -->
 <header class="header">
-    <div class="container">
+    <section class="header__rowTop">
+        <div class="container">
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="header__rowTop__redeSocial">
 
-            <!-- Logo -->
-            <a class="navbar-brand order-sm-1" href="<?php bloginfo('info'); ?>">
-                <?php
-                    if(function_exists('the_custom_logo') ) {
-                        the_custom_logo();
-                    }
-                ?>
-            </a>
+                <!-- Rede Social -->
+                <ul class="list list-unstyled">
+
+                <?php if( get_theme_mod('up_text_phone') ) : ?>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-phone"></i>
+                            Ligue <span class="font-weight-bold"><?php echo get_theme_mod('up_text_phone'); ?></span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+
+                <?php if( get_theme_mod('up_link_email') && get_theme_mod('up_text_email') ) : ?>
+                    <li>
+                        <a href="mailto:<?php echo get_theme_mod('up_link_email'); ?>">
+                            <i class="fas fa-envelope"></i>
+                            <?php echo get_theme_mod('up_text_email'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+
+                <?php if( get_theme_mod('up_text_address') && get_theme_mod('up_link_googlemaps_address') ) : ?>
+                    <li>
+                        <a href="<?php echo get_theme_mod('up_link_googlemaps_address'); ?>">
+                            <i class="fas fa-map-marker"></i>
+                            <?php echo get_theme_mod('up_text_address'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+
+                </ul>
+
+                <!-- Button Quote -->
+                <?php if(get_theme_mod('up_text_btn_sale') ) : ?>
+                    <a href="#" class="btn-quote">
+                        <i class="fas fa-user-tie"></i>
+                        <?php echo get_theme_mod('up_text_btn_sale'); ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="header__rowBottom">
+        <div class="container">
+            <div class="header__rowBottom__wrapper">
+
+                <nav class="navbar navbar-expand-lg navbar-light">
+                
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
         
-            <button class="navbar-toggler order-3 order-sm-0 collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <div class="collapse navbar-collapse order-3 order-sm-2 justify-content-end" id="navbarSupportedContent">
+                    <?php
+                        if( has_nav_menu ('main-menu-left') || has_nav_menu('main-menu-right') ) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'main-menu-left',
+                                'fallback_cb' => false,
+                                'container_class' => null,
+                                'container_id' => 'navbarResponsive',
+                                'menu_class' => 'navbar-nav'
+                            ));
+                        }
+                    ?>
 
-                <?php 
-                    if( has_nav_menu('main-menu') ) {
-                        wp_nav_menu([
-                            'theme_location' => 'main-menu',
-                            'fallback_cb' => false,
-                            'container_class' => null,
-                            'container_id' => 'navbarResponsive',
-                            'menu_class' => 'navbar-nav'
-                        ]);
-                    }
-                ?>
+                        <!-- <ul class="navbar-nav">
+        
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Gallery</a>
+                            </li>
+        
+                        </ul> -->
+                    </div>
+        
+                    <!-- <a class="btn-sale" href="#">GET COACHING</a>         -->
+        
+                    <!-- Logo -->
+
+                    <?php 
+                    $img_logo = get_template_directory_uri() . '/public/images/logo.png';
+                        if(get_theme_mod('up_logo_header') ) : 
+                    ?>
+                        <a class="navbar-brand m-auto" href="<?php bloginfo(url);?> ">
+                            <img class="img-responsive" src="<?php echo $img_logo = get_theme_mod('up_logo_header'); ?> " alt="Logo Empresa">
+                        </a>
+                    <?php endif; ?>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pages <span class="sr-only">(current)</span></a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+        
+                            <li class="nav-link btn-search">
+                                <i class="fas fa-search"></i>
+                            </li>
+        
+                        </ul>
+                    </div>
+
+                    <!-- <ul class="group-icons d-flex m-0 list-unstyled align-items-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Courses</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+
+                        <li class="nav-link btn-search">
+                            <i class="fas fa-search"></i>
+                        </li>
+        
+                    </ul> -->
+        
+                </nav>
 
             </div>
+            
+        </div>
+    </section>
 
-            <?php if( get_theme_mod('up_btn_sale') ) : ?>
-                <a class="btn-sale order-1 order-sm-3" href="#">
-                    <?php echo get_theme_mod('up_btn_sale'); ?>
-                </a>
-            <?php endif; ?>
-
-            <ul class="group-icons d-flex m-0 list-unstyled order-2 order-sm-4 align-items-center">
-
-                <li class="nav-link btn-search">
-                    <i class="fas fa-search"></i>
-                </li>
-
-                <li class="nav-item btn-login">
-                    <a href="#">Login</a>
-                </li>
-
-            </ul>
-
-        </nav>
-        
-    </div>
 </header>
 <!-- end Header -->

@@ -29,7 +29,7 @@ function up_after_setup(){
     ]);
 
     add_theme_support('custom-header', [
-        'default-image'      => get_template_directory_uri() . './src/images/logo.png',
+        'default-image'      => get_template_directory_uri() . '/src/images/logo.png',
         'default-text-color' => '000',
         'width'              => 1000,
         'height'             => 250,
@@ -37,6 +37,8 @@ function up_after_setup(){
         'flex-height'        => true,
     ]);
 
-    register_nav_menu('main-menu', ('Menu Principal') );
+    // Menus
+    register_nav_menu('main-menu-left', ('Menu Principal Esquerdo') );
+    register_nav_menu('main-menu-right', ('Menu Principal Direita') );
     register_nav_menu('footer-menu', ('Footer Menu') );
 }
