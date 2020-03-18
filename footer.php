@@ -5,25 +5,47 @@
             <div class="col-md-6">
 
                 <div class="footer-wrapper-about">
-                    <a href="#" class="logo">
-                        <img src="<?php echo get_template_directory_uri(); ?> /public/images/withe_logo.png" alt="">
-                    </a>
-                    <p class="text">Dolor sitam consectetur adipisicing eiusmod tempor cididunt laboret mag magn aliquat enim sed minim veniam nostrud sed lorem ipsum dolor.</p>
-                    <p class="adress">
-                        206 South Marion Avenue, Sanford <br>
-                        Florida 33020, USA
-                    </p>
+                    <?php 
+                        $img_logo = get_template_directory_uri() . '/public/images/withe_logo.png';
+                        if(get_theme_mod('up_logo_header') ) : 
+                    ?>
+                        <a href="<?php bloginfo(url); ?>" class="logo">
+                            <img class="img-responsive" src="<?php echo $img_logo = get_theme_mod('up_logo_footer'); ?> " alt="<?php echo get_theme_mod('up_desc_logo_footer') ?>">
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if(get_theme_mod('up_text_about_footer') ) : ?>
+                        <p class="text"><?php echo get_theme_mod('up_text_about_footer'); ?>Dolor sitam consectetur adipisicing eiusmod tempor cididunt laboret mag magn aliquat enim sed minim veniam nostrud sed lorem ipsum dolor.</p>
+                    <?php ?>
+
+                    <?php if(get_theme_mod('up_text1_address_footer') && get_theme_mod('up_text2_address_footer') ) : ?>
+                        <p class="address">
+                            <!-- 206 South Marion Avenue, Sanford  -->
+                            <?php echo get_theme_mod('up_text1_address_footer'); ?> <br>
+                            <?php echo get_theme_mod('up_text2_address_footer'); ?>
+                            <!-- Florida 33020, USA -->
+                        </p>
+                    <?php endif; ?>
+
                     <ul class="footer-wrapper-contact">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            Ligue Para (11) 1234-5678
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            contato@upsites.digital
-                        </li>
+                        <?php if(get_theme_mod('up_text_phone_footer') ) : ?>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <?php echo get_theme_mod('up_text_phone_footer'); ?>
+                            </li>
+                        <?php endif; ?>
+
+                        <?php if(get_theme_mod('up_text_email_footer') ) : ?>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <?php echo get_theme_mod('up_text_phone_footer'); ?>
+                            </li>
+                        <?php endif; ?>
                     </ul>
-                    <a href="#" class="footer-wrapper-about-btn"><i class="fas fa-user-tie"></i> Solicitar Orçamento</a>
+
+                    <?php if(get_theme_mod('up_btn_about_footer') && get_theme_mod('up_link_btn_about_footer') ) : ?>
+                        <a href="<?php echo get_theme_mod('up_link_btn_about_footer'); ?>" class="footer-wrapper-about-btn"><i class="fas fa-user-tie"></i><?php echo get_theme_mod('up_btn_about_footer'); ?></a>
+                    <?php endif; ?>
                 </div>
 
             </div>
