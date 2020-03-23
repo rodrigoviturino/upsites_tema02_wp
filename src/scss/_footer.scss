@@ -26,7 +26,7 @@
                 }
             }
 
-            .adress {
+            .address {
                 color: $gray-200;
                 margin: map-get($spacers, 5 ) 0;
                 font-weight: $font-weight-bold;
@@ -191,7 +191,7 @@
             ul {
                 display: flex;
                 flex-wrap: wrap;
-                padding: 0;
+                padding: map-get($spacers, 0 );
                 margin-top: 40px;
                 
                 li {
@@ -226,14 +226,16 @@
                 display: flex;
                 flex-wrap: wrap;
                 // justify-content: space-evenly;
-                padding: 0;
-                margin-top: 40px;
+                padding: map-get($spacers, 0 );
+                // margin-top: 40px;
 
                 li {
                     list-style: none;
+                    margin-top: map-get($spacers, 4);
 
                     &:nth-child(even){
                         margin: 0 15px;
+                        margin-top: map-get($spacers, 4);
                     }
 
                     a {

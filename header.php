@@ -118,7 +118,7 @@
                         if(get_theme_mod('up_logo_header') ) : 
                     ?>
                         <a class="navbar-brand m-auto" href="<?php bloginfo(url);?> ">
-                            <img class="img-responsive" src="<?php echo $img_logo = get_theme_mod('up_logo_header'); ?> " alt="Logo Empresa">
+                            <img src="<?php echo $img_logo ?> " class='img-fluid' alt="Logo Empresa" <?php echo get_theme_mod('up_logo_header'); ?>>
                         </a>
                     <?php endif; ?>
 
