@@ -8,6 +8,11 @@
             background-color: #00232b;
             padding: 65px 60px;
 
+            @include media-breakpoint-only(xs){
+                text-align: center;
+                padding: map-get($spacers, 5) map-get($spacers, 3);
+            }
+
             .logo {
                 display: block;
                 text-decoration: none;
@@ -23,6 +28,10 @@
                     height: 2px;
                     background-color: $gray-600;
                     margin: 50px 0;
+
+                    @include media-breakpoint-only(xs){
+                        margin: map-get($spacers, 4) 0;
+                    }
                 }
             }
 
@@ -30,6 +39,10 @@
                 color: $gray-200;
                 margin: map-get($spacers, 5 ) 0;
                 font-weight: $font-weight-bold;
+
+                @include media-breakpoint-only(xs){
+                    margin: map-get($spacers, 3) 0;
+                }
             }
 
             &-btn {
@@ -74,6 +87,11 @@
             justify-content: space-evenly;
             padding: 0;
             margin-bottom: map-get($spacers, 5);
+            
+            @include media-breakpoint-only(xs){
+                flex-direction: column;
+                margin-bottom: map-get($spacers, 4);
+            }
 
             li {
                 color: #fff;
@@ -100,6 +118,10 @@
                     text-align: left;
                     @include responsive-font-size(18px);
 
+                    @include media-breakpoint-only(xs){
+                        text-align: center;
+                    }
+
                     &:after{
                         content: '';
                         display: block;
@@ -109,6 +131,11 @@
                         width: 30px;
                         position: absolute;
                         left: 0px;
+
+                        @include media-breakpoint-only(xs){
+                            position: unset;
+                            margin: 10px auto;
+                        }
                     }
                 }
 
@@ -116,7 +143,12 @@
                     list-style: none;
                     text-align: left;
                     padding: 0;
-                    margin-top: 30px;
+                    margin-top: map-get($spacers, 3);
+
+                    @include media-breakpoint-only(xs){
+                        text-align: center;
+                        margin-top: map-get($spacers, 2 );
+                    }
                     
                     li {
                         padding: 5px 0;
@@ -135,6 +167,10 @@
             .block-hours {
                 margin-top: 50px;
 
+                @include media-breakpoint-only(xs){
+                    margin-top: map-get($spacers, 5);
+                }
+
                 .title {
                     color: #fff;
                     font-weight: $font-weight-bold;
@@ -142,6 +178,11 @@
                     text-align: left;
                     margin-bottom: 30px;
                     @include responsive-font-size(18px);
+
+                    @include media-breakpoint-only(xs){
+                        text-align: center;
+                        margin-bottom: map-get($spacers, 3);
+                    }
 
                     &:after{
                         content: '';
@@ -152,6 +193,11 @@
                         width: 30px;
                         position: absolute;
                         left: 0px;
+
+                        @include media-breakpoint-only(xs){
+                            position: unset;
+                            margin: 0 auto;
+                        }
                     }
                 }
 
@@ -159,6 +205,10 @@
                     color: $gray-400;
                     margin-bottom: 0;
                     text-align: left;
+
+                    @include media-breakpoint-only(xs){
+                        text-align: center;
+                    }
                 }
 
         
@@ -169,12 +219,20 @@
         &-feed {
             margin-top: 65px;
 
+            @include media-breakpoint-only(xs){
+                margin-top: map-get($spacers, 5);
+            }
+
             .title {
                 color: #fff;
                 font-weight: $font-weight-bold;
                 position: relative;
                 text-align: left;
                 @include responsive-font-size(18px);
+
+                @include media-breakpoint-only(xs){
+                    text-align: center;
+                }
 
                 &:after{
                     content: '';
@@ -185,6 +243,11 @@
                     width: 30px;
                     position: absolute;
                     left: 0px;
+
+                    @include media-breakpoint-only(xs){
+                        position: unset;
+                        margin: map-get($spacers, 2) auto;
+                    }
                 }
             }
 
@@ -192,7 +255,12 @@
                 display: flex;
                 flex-wrap: wrap;
                 padding: map-get($spacers, 0 );
-                margin-top: 40px;
+                margin-top: map-get($spacers, 4);
+                list-style: none;
+
+                @include media-breakpoint-only(xs){
+                    justify-content: center;
+                }
                 
                 li {
                     margin: 2px;
@@ -203,12 +271,20 @@
         &-redesocial {
             margin-top: 65px;
 
+            @include media-breakpoint-only(xs){
+                margin-top: map-get($spacers, 5);
+            }
+
             .title {
                 color: #fff;
                 font-weight: $font-weight-bold;
                 position: relative;
                 text-align: left;
                 @include responsive-font-size(18px);
+
+                @include media-breakpoint-only(xs){
+                    text-align: center;
+                }
 
                 &:after{
                     content: '';
@@ -219,6 +295,11 @@
                     width: 30px;
                     position: absolute;
                     left: 0px;
+
+                    @include media-breakpoint-only(xs){
+                        position: unset;
+                        margin: map-get($spacers, 2) auto;
+                    }
                 }
             }
 
@@ -229,13 +310,25 @@
                 padding: map-get($spacers, 0 );
                 // margin-top: 40px;
 
+                @include media-breakpoint-only(xs){
+                    justify-content: center;
+                }
+
                 li {
                     list-style: none;
                     margin-top: map-get($spacers, 4);
 
+                    @include media-breakpoint-only(xs){
+                        margin-top: map-get($spacers, 2);
+                    }
+
                     &:nth-child(even){
                         margin: 0 15px;
                         margin-top: map-get($spacers, 4);
+
+                        @include media-breakpoint-only(xs){
+                            margin-top: map-get($spacers, 2);
+                        }
                     }
 
                     a {
@@ -266,6 +359,23 @@
             margin: 0;
             text-align: left;
             @include responsive-font-size(16px);
+            
+            @include media-breakpoint-only(xs){
+                text-align: center;
+                @include responsive-font-size(14px);
+            }
+
+            a {
+                color: $pink;
+                transition: all 0.7s;
+                cursor: pointer;
+                text-decoration: none;
+
+                &:hover {
+                    transition: all 0.7s;
+                    color: $red;
+                }
+            }
         }
     }
 }

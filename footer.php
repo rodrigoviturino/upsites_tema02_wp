@@ -62,7 +62,7 @@
                                     'fallback_cb' => false,
                                     'container_class' => null,
                                     'container_id' => 'navbarResponsive',
-                                    'menu_class' => 'navbar-nav'
+                                    'menu_class' => 'navbar-nav menu'
                                 ));
                             }
                         ?>
@@ -190,5 +190,114 @@ window.addEventListener('scroll', () => {
 </script>
 
 <?php wp_footer(); ?>
+
+<style type="text/css">
+
+ /* Row Top */
+    .header__rowTop {
+        background-color: <?php echo get_theme_mod('up_cor_fundo_rowTop_header'); ?>;
+    }
+
+    .header__rowTop__redeSocial .list li a i{
+        color: <?php echo get_theme_mod('up_cor_icone_telefone_header'); ?>;
+    }
+    .header__rowTop__redeSocial .list li a{
+        color: <?php echo get_theme_mod('up_cor_texto_telefone_header'); ?>;
+    }
+
+    .header__rowTop__redeSocial .list li a i{
+        color: <?php echo get_theme_mod('up_cor_icone_email_header'); ?>;
+    }
+    .header__rowTop__redeSocial .list li a{
+        color: <?php echo get_theme_mod('up_cor_texto_email_header'); ?>;
+    }
+
+    .header__rowTop__redeSocial .list li a i{
+        color: <?php echo get_theme_mod('up_cor_icone_local_header'); ?>;
+    }
+    .header__rowTop__redeSocial .list li a{
+        color: <?php echo get_theme_mod('up_cor_texto_local_header'); ?>;
+    }
+
+    .header__rowTop .btn-quote {
+        background-color: <?php echo get_theme_mod('up_cor_btn_atendimento_header'); ?>;
+        color: <?php echo get_theme_mod('up_cor_texto_btn_atendimento_header'); ?>;
+    }
+    .header__rowTop .btn-quote i {
+        color: <?php echo get_theme_mod('up_cor_icon_btn_atendimento_header'); ?>;
+    }
+    /* Row Menu */
+    .header__rowBottom {
+        background-color: <?php echo get_theme_mod('up_cor_fundo_rowMenu_header'); ?>;
+    }
+    .header__rowBottom__wrapper .navbar #navbarSupportedContent .navbar-nav li a {
+        color: <?php echo get_theme_mod('up_cor_texto_item_menu_header'); ?>;
+    }
+    .header__rowBottom__wrapper .navbar #navbarSupportedContent .navbar-nav li a:hover {
+        color: <?php echo get_theme_mod('up_cor_hover_texto_item_menu_header'); ?>;
+    }
+    .header__rowBottom__wrapper .navbar .btn-search i {
+        color: <?php echo get_theme_mod('up_cor_icon_search_header'); ?>;
+    }
+    .header__rowBottom__wrapper .navbar .btn-search i:hover {
+        color: <?php echo get_theme_mod('up_cor_hover_icon_search_header'); ?>;
+    }
+    
+    /* Footer */
+    .footer {
+        color: <?php echo get_theme_mod('up_cor_principal_footer'); ?>;
+    }
+    /* About */
+    .footer-wrapper-about {
+        color: <?php echo get_theme_mod('up_cor_principal_about_footer'); ?>;
+    }
+    .footer-wrapper-about .text {
+        color: <?php echo get_theme_mod('up_cor_texto_about_footer'); ?>;
+    }
+    .footer-wrapper-about .text::after {
+        background-color: <?php echo get_theme_mod('up_cor_linha_about_footer'); ?>;
+    }
+
+    .footer-wrapper-about .address {
+        color: <?php echo get_theme_mod('up_cor_texto_endereco_about_footer'); ?>;
+    }
+    /* Telefone */
+    .footer-wrapper-contact li {
+        color: <?php echo get_theme_mod('up_cor_texto_telefone_about_footer'); ?>;
+    }
+    .footer-wrapper-contact li i {
+        color: <?php echo get_theme_mod('up_cor_icone_telefone_about_footer'); ?>;
+    }
+    /* Email */
+    .footer-wrapper-contact li {
+        color: <?php echo get_theme_mod('up_cor_texto_email_about_footer'); ?>;
+    }
+    .footer-wrapper-contact li i {
+        color: <?php echo get_theme_mod('up_cor_icon_email_about_footer'); ?>;
+    }
+    /* Botão About */
+    .footer-wrapper-about-btn{
+        background-color: <?php echo get_theme_mod('up_cor_botao_about_footer'); ?>;
+        color: <?php echo get_theme_mod('up_cor_texto_botao_about_footer'); ?>;
+    }
+    .footer-wrapper-about-btn i{
+        color: <?php echo get_theme_mod('up_cor_icone_botao_about_footer'); ?>;
+        transition: all 0.7s;
+    }
+    /** Botão Hover */
+    .footer-wrapper-about-btn:hover {
+        background-color: <?php echo get_theme_mod('up_cor_hover_fundo_botao_about_footer'); ?>;
+        color: <?php echo get_theme_mod('up_cor_hover_texto_botao_about_footer'); ?>;
+    }
+
+    .footer-wrapper-about-btn:hover i {
+        transition: all 0.7s;
+        color: <?php echo get_theme_mod('up_cor_hover_icone_botao_about_footer'); ?>;
+    }
+    
+
+
+</style>
+
 </body>
 </html>

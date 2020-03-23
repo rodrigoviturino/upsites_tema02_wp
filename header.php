@@ -70,11 +70,9 @@
 
                 <nav class="navbar navbar-expand-lg navbar-light">
                 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    
         
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarSupportedContent">
 
                     <?php
                         if( has_nav_menu ('main-menu-left') || has_nav_menu('main-menu-right') ) {
@@ -112,18 +110,20 @@
                     <!-- <a class="btn-sale" href="#">GET COACHING</a>         -->
         
                     <!-- Logo -->
-
+                    <button class="navbar-toggler order-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <?php 
                     $img_logo = get_template_directory_uri() . '/public/images/logo.png';
                         if(get_theme_mod('up_logo_header') ) : 
                     ?>
-                        <a class="navbar-brand m-auto" href="<?php bloginfo(url);?> ">
+                        <a class="navbar-brand m-auto order-1 order-lg-2" href="<?php bloginfo(url);?> ">
                             <img src="<?php echo $img_logo ?> " class='img-fluid' alt="Logo Empresa" <?php echo get_theme_mod('up_logo_header'); ?>>
                         </a>
                     <?php endif; ?>
 
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse order-4 order-lg-3" id="navbarSupportedContent">
                         <ul class="navbar-nav">
         
                             <li class="nav-item">
