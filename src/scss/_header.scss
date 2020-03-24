@@ -16,7 +16,7 @@
 
 
     &__rowTop {
-        background-color: #F2F7FB;
+        background-color: $gray-100;
 
         &__redeSocial {
             display: flex;
@@ -54,11 +54,11 @@
 
                         &:hover {
                             transition: all 0.7s;
-                            color: #2FC0E2;
+                            color: $cyan;
                         }
 
                         i {
-                            color: #2FC0E2;
+                            color: $cyan;
                             margin-right: map-get($spacers, 1 );
                         }
 
@@ -73,7 +73,7 @@
             align-items: center;
             margin-left: auto;
             padding: 12px 20px;
-            background-color: #e16297;
+            background-color: $pink;
             color: $white;
             font-weight: $font-weight-bold;
             text-transform: uppercase;
@@ -85,13 +85,13 @@
             @include responsive-font-size(14px);
 
                 &:hover {
-                    background-color: #2fc0df;
+                    background-color: $cyan;
                     transition: all 1s;
-                    border: solid 1px #2fc0df;
-                    color: #fff;
+                    border: solid 1px $cyan;
+                    color: $white;
 
                     i {
-                        color: #fff;
+                        color: $white;
                     }
                 }
 
@@ -125,6 +125,12 @@
                     justify-content: center;
                     align-items: center;
                 }
+                @include media-breakpoint-only(sm){ 
+                    justify-content: center;
+                }
+                @include media-breakpoint-only(md){ 
+                    justify-content: center;
+                }
 
                 // Logo
                 .navbar-brand {
@@ -136,6 +142,12 @@
                         display: block;
                         text-align: center;
                         margin: 0 10px map-get($spacers, 2) !important;
+                    }
+                    @include media-breakpoint-only(sm){
+                        margin: 0 !important;
+                    }
+                    @include media-breakpoint-only(md){
+                        margin: 0 !important;
                     }
 
                 }
@@ -154,6 +166,9 @@
                         align-items: center;
                         @include media-breakpoint-only(xs){
                             // background-color: $gray-600;
+                        }
+                        @include media-breakpoint-only(sm){
+                            align-items: center;
                         }
 
                         li {
@@ -213,7 +228,7 @@
                     i {
                         transition: all 0.6s;
                         cursor: pointer;
-                        color: #e16297;
+                        color: $pink;
 
                         &:hover {
                             transition: all 0.6s;

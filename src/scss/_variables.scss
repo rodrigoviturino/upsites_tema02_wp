@@ -14,7 +14,7 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #1E2228 !default;
+$gray-900: #001a20 !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -34,16 +34,16 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #0a2c4e !default;
+$blue:    #00232b !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
+$pink:    #e16297 !default;
 $red:     #ff3b47 !default;
 $orange:  #f35c27 !default;
 $yellow:  #ffb600 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #2FC0DF !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
