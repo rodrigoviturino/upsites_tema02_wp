@@ -135,8 +135,8 @@
                 // Logo
                 .navbar-brand {
                     padding: 0;
-                    display: inherit;
-                    margin: 0 50px;
+                    display: flex;
+                    margin: 0 50px !important;
 
                     @include media-breakpoint-only(xs){
                         display: block;
@@ -149,6 +149,7 @@
                     @include media-breakpoint-only(md){
                         margin: 0 !important;
                     }
+                   
 
                 }
 
