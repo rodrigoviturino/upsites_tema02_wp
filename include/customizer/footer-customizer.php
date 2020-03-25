@@ -17,6 +17,8 @@ function up_footer_customizer( $wp_customize ) {
     // Botão About
     $wp_customize->add_setting( 'up_btn_about_footer', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_link_btn_about_footer', [ 'default' => "" ]);
+    
+    // Menu Footer
 
     // Horario Funcionamento
     $wp_customize->add_setting( 'up_title_hours_company_footer', [ 'default' => "" ]);

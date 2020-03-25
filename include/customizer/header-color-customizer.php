@@ -8,11 +8,11 @@ function up_color_header_customizer( $wp_customize ) {
         //Background Topo
         $wp_customize->add_setting( 'up_cor_fundo_rowTop_header', ['default' => "#f2f7fb" ]);
 
-        $wp_customize->add_setting( 'up_cor_icone_telefone_header', ['default' => "#2fc0df" ]);
+        $wp_customize->add_setting( 'up_cor_icone_telefone_header', ['default' => "$cyan" ]);
         $wp_customize->add_setting( 'up_cor_texto_telefone_header', ['default' => "#495057" ]);
-        $wp_customize->add_setting( 'up_cor_icone_email_header', ['default' => "#2fc0df" ]);
+        $wp_customize->add_setting( 'up_cor_icone_email_header', ['default' => "$cyan" ]);
         $wp_customize->add_setting( 'up_cor_texto_email_header', ['default' => "#495057" ]);
-        $wp_customize->add_setting( 'up_cor_icone_local_header', ['default' => "#2fc0df" ]);
+        $wp_customize->add_setting( 'up_cor_icone_local_header', ['default' => "$cyan" ]);
         $wp_customize->add_setting( 'up_cor_texto_local_header', ['default' => "#495057" ]);
         // Botão Header
         $wp_customize->add_setting( 'up_cor_btn_atendimento_header', ['default' => "#e16297" ]);
@@ -22,9 +22,9 @@ function up_color_header_customizer( $wp_customize ) {
         // Row Menu
         $wp_customize->add_setting( 'up_cor_fundo_rowMenu_header', ['default' => "#FFF" ]);
         $wp_customize->add_setting( 'up_cor_texto_item_menu_header', ['default' => "#1e2228" ]);
-        $wp_customize->add_setting( 'up_cor_hover_texto_item_menu_header', ['default' => "#2fc0df" ]);
+        $wp_customize->add_setting( 'up_cor_hover_texto_item_menu_header', ['default' => "$cyan" ]);
         $wp_customize->add_setting( 'up_cor_icon_search_header', ['default' => "#e16297" ]);
-        $wp_customize->add_setting( 'up_cor_hover_icon_search_header', ['default' => "#2fc0df" ]);
+        $wp_customize->add_setting( 'up_cor_hover_icon_search_header', ['default' => "$cyan" ]);
 
 
 

@@ -131,7 +131,7 @@
                         <?php if (get_theme_mod('up_link_facebook_footer') ) : ?>
                             <li>
                                 <a href="<?php echo get_theme_mod('up_link_facebook_footer') ?>">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -295,7 +295,98 @@ window.addEventListener('scroll', () => {
         color: <?php echo get_theme_mod('up_cor_hover_icone_botao_about_footer'); ?>;
     }
     
-
+    /** Menu Footer */
+    .footer-wrapper-menu .block-menu .title {
+        color: <?php echo get_theme_mod('up_cor_titulo_menu_footer'); ?>;
+    }
+    .footer-wrapper-menu .block-menu .menu li a {
+        transition: all 0.7s;
+        color: <?php echo get_theme_mod('up_cor_texto_menu_footer'); ?>;
+    }
+    .footer-wrapper-menu .block-menu .menu li a:hover {
+        transition: all 0.7s;
+        color: <?php echo get_theme_mod('up_cor_hover_texto_menu_footer'); ?>;
+    }
+    .footer-wrapper-menu .block-hours .title {
+        color: <?php echo get_theme_mod('up_cor_titulo_hours_footer'); ?>;
+    }
+    .footer-wrapper-menu .block-hours .text {
+        color: <?php echo get_theme_mod('up_cor_texto1_hours_footer'); ?>;
+    }
+    .footer-wrapper-menu .block-hours .text {
+        color: <?php echo get_theme_mod('up_cor_texto2_hours_footer'); ?>;
+    }
+    .footer-wrapper-feed .title {
+        color: <?php echo get_theme_mod('up_cor_titulo_feed_footer'); ?>;
+    }
+    .footer-wrapper-redesocial .title {
+        color: <?php echo get_theme_mod('up_cor_titulo_redesocial_footer'); ?>;
+    }
+    .footer-wrapper-redesocial .title {
+        color: <?php echo get_theme_mod('up_cor_linha_redesocial_footer'); ?>;
+    }
+    /** Icone Twitter */
+    .footer-wrapper-redesocial ul li a i.fa-twitter{
+        color: <?php echo get_theme_mod('up_cor_icone_twitter_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a {
+        border-color: <?php echo get_theme_mod('up_cor_borda_icone_twitter_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a:hover{
+        border-color: <?php echo get_theme_mod('up_cor_hover_borda_twitter_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a:hover i {
+        color: <?php echo get_theme_mod('up_cor_hover_icone_twitter_footer'); ?>;
+    }
+    /** Icone Facebook */
+    .footer-wrapper-redesocial ul li a i.fa-facebook-f{
+        color: <?php echo get_theme_mod('up_cor_icone_face_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a {
+        border-color: <?php echo get_theme_mod('up_cor_borda_icone_face_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a:hover{
+        border-color: <?php echo get_theme_mod('up_cor_hover_borda_face_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li a:hover i {
+        color: <?php echo get_theme_mod('up_cor_hover_icone_face_footer'); ?>;
+    }
+    /** Icone Instagram */
+    .footer-wrapper-redesocial ul li a i.fa-instagram{
+        color: <?php echo get_theme_mod('up_cor_icone_insta_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a {
+        border-color: <?php echo get_theme_mod('up_cor_borda_icone_insta_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a:hover{
+        border-color: <?php echo get_theme_mod('up_cor_hover_borda_insta_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li a:hover i {
+        color: <?php echo get_theme_mod('up_cor_hover_icone_insta_footer'); ?>;
+    }
+    /** Icone Linkedin */
+    .footer-wrapper-redesocial ul li a i.fa-linkedin{
+        color: <?php echo get_theme_mod('up_cor_icone_linkedin_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a {
+        border-color: <?php echo get_theme_mod('up_cor_borda_icone_linkedin_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li:first-child a:hover{
+        border-color: <?php echo get_theme_mod('up_cor_hover_borda_linkedin_footer'); ?>;
+    }
+    .footer-wrapper-redesocial ul li a:hover i {
+        color: <?php echo get_theme_mod('up_cor_hover_icone_linkedin_footer'); ?>;
+    }
+    /* Copyright */
+    .footer-copyright p {
+        color: <?php echo get_theme_mod('up_cor_texto_copyright'); ?>;
+    }
+    .footer-copyright p a {
+        color: <?php echo get_theme_mod('up_cor_empresa_copyright'); ?>;
+    }
+    .footer-copyright p a:hover {
+        color: <?php echo get_theme_mod('up_cor_hover_empresa_copyright'); ?>;
+    }
 
 </style>
 
