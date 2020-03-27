@@ -1,20 +1,6 @@
 .header {
-    
-    // Ativador Menu Sticky
-        // &.scrollHide {
-        //     transition: all 0.7s;
-        //     background-color: $gray-200;
-        //     position: fixed;
-        //     top: map-get($spacers, 0);
-
-        //     @include media-breakpoint-only(xs){
-        //         background-color: $gray-300;
-        //     }   
-
-        // }
-    // end Ativador Menu Sticky
-
-
+    position: relative;
+ 
     &__rowTop {
         background-color: $gray-100;
 
@@ -110,11 +96,33 @@
     &__rowBottom {
         padding: map-get($spacers, 1 ) 0;
 
+           // Ativador Menu Sticky
+           &.scrollHide {
+            transition: all 0.7s;
+            background-color: $gray-200;
+            position: fixed;
+            top: map-get($spacers, 0);
+            left: map-get($spacers, 0);
+            z-index: 10;
+            width: 100%;
+
+            .header__rowBottom__wrapper {
+                padding: map-get($spacers, 1) 0;
+            }
+
+            @include media-breakpoint-only(xs){
+                background-color: $gray-300;
+            }   
+
+        }
+    // end Ativador Menu Sticky
+
         &__wrapper{
             display: flex;
             align-items: center;
             justify-content: center;
             padding: map-get($spacers, 4 ) 0;
+
 
             .navbar {
                 // padding: map-get($spacers, 4) map-get($spacers, 5);
