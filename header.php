@@ -142,32 +142,8 @@
                                 <a class="nav-link" href="#">Contact</a>
                             </li>
         
-                            <li class="nav-link btn-search">
-                                <i class="fas fa-search"></i>
-                            </li>
-        
                         </ul>
                     </div>
-
-                    <!-- <ul class="group-icons d-flex m-0 list-unstyled align-items-center">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Courses</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-
-                        <li class="nav-link btn-search">
-                            <i class="fas fa-search"></i>
-                        </li>
-        
-                    </ul> -->
         
                 </nav>
 

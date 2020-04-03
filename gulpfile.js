@@ -82,7 +82,7 @@ function styles_login() {
 
 // Scripts
 function scripts() {
-    return gulp.src(['src/js/**/*.js'])
+    return gulp.src(['src/js/**/*.js', 'node_modules/bootstrap/js/src/index.js'])
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(concat('theme.js'))
         .pipe(rename({ suffix: '.min' }))
@@ -109,7 +109,7 @@ function fonts() {
 }
 
 // Default task
-gulp.task('default', gulp.series(html_minifier, styles, images, fonts, scripts));
+gulp.task('default', gulp.series(html_minifier, styles, images, scripts, fonts));
 
 // Watch task
 gulp.task('watch', function() {

@@ -23,8 +23,6 @@ function up_color_header_customizer( $wp_customize ) {
         $wp_customize->add_setting( 'up_cor_fundo_rowMenu_header', ['default' => "#FFF" ]);
         $wp_customize->add_setting( 'up_cor_texto_item_menu_header', ['default' => "#1e2228" ]);
         $wp_customize->add_setting( 'up_cor_hover_texto_item_menu_header', ['default' => "$cyan" ]);
-        $wp_customize->add_setting( 'up_cor_icon_search_header', ['default' => "#e16297" ]);
-        $wp_customize->add_setting( 'up_cor_hover_icon_search_header', ['default' => "$cyan" ]);
 
 
 
@@ -201,32 +199,6 @@ function up_color_header_customizer( $wp_customize ) {
             ]
         )
     );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_icon_search_header',
-
-            [
-                'label' => 'Cor do Icone da Lupa do Menu',
-                'section' => 'up_color_header_section',
-                'settings' => 'up_cor_icon_search_header',
-            ]
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_hover_icon_search_header',
-
-            [
-                'label' => 'Cor do Hover Icone da Lupa do Menu',
-                'section' => 'up_color_header_section',
-                'settings' => 'up_cor_hover_icon_search_header',
-            ]
-        )
-    );
-
-
-
+   
 
 }
