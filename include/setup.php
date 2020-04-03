@@ -37,6 +37,9 @@ function up_after_setup(){
         'flex-height'        => true,
     ]);
 
+    // Thumbnail
+    add_theme_support( 'post-thumbnails' );
+
     // Menus
     register_nav_menu('main-menu-left', ('Menu Principal Esquerdo') );
     register_nav_menu('main-menu-right', ('Menu Principal Direita') );
