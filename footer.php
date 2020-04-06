@@ -81,42 +81,45 @@
                 </div>
             </div>
 
+
             <div class="col-md-3">
-                <div class="footer-wrapper-feed">
-                    <h4 class="title"><?php echo get_theme_mod('up_title_feed_footer') ?></h4>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Feed - Verificar como vai ser esse bloco -->
+                    <!-- <div class="footer-wrapper-feed">
+                        <h4 class="title"><?php echo get_theme_mod('up_title_feed_footer') ?></h4>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="<?php echo get_template_directory_uri();?> '/public/images/img-feed.png' " alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div> -->
+                <!-- end Feed -->
 
                 <div class="footer-wrapper-redesocial">
                     <h4 class="title"><?php echo get_theme_mod('up_title_social_network') ?></h4>
@@ -156,6 +159,7 @@
                     </ul>
                 </div>
             </div>
+
 
         </div>
 
