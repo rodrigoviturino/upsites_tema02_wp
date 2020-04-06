@@ -6,6 +6,7 @@ function up_footer_customizer( $wp_customize ) {
     // Settings 
     // Logo About
     $wp_customize->add_setting( 'up_logo_footer', [ 'default' => "" ]);
+    $wp_customize->add_setting( 'up_desc_logo_footer', [ 'default' => "" ]);
     // Texto e Endereço About
     $wp_customize->add_setting( 'up_text_about_footer', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_text1_address_footer', [ 'default' => "" ]);
@@ -60,6 +61,19 @@ function up_footer_customizer( $wp_customize ) {
             ]
         )
     );
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control (
+            $wp_customize,
+
+            'up_desc_logo_footer',
+            [
+                'label' => 'Logo Descrição Imagem Footer',
+                'section' => 'up_footer_section',
+                'settings' => 'up_desc_logo_footer',
+            ]
+        )
+    );
+
     // Texto About
     $wp_customize->add_control(
         new WP_Customize_Control (
