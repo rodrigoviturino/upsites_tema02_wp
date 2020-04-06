@@ -124,6 +124,20 @@ function up_header_customizer( $wp_customize ) {
  
 
     // Logo 
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+
+            'up_logo_header',
+                [
+                    'label'=>'Logo do Header',
+                    'section' => 'up_header_section',
+                    'settings' => 'up_logo_header'
+                ]
+        )
+    );
+
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -134,18 +148,6 @@ function up_header_customizer( $wp_customize ) {
                     'section' => 'up_header_section',
                     'settings' => 'up_desc_logo_header',
                     'type' => 'text'
-                ]
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-            $wp_customize,
-
-            'up_logo_header',
-                [
-                    'label'=>'Logo do Header',
-                    'section' => 'up_header_section',
-                    'settings' => 'up_logo_header'
                 ]
         )
     );
