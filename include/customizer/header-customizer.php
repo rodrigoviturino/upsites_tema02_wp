@@ -125,14 +125,15 @@ function up_header_customizer( $wp_customize ) {
 
     // Logo 
     $wp_customize->add_control(
-        new WP_Customize_Image_Control(
+        new WP_Customize_Control(
             $wp_customize,
 
             'up_desc_logo_header',
                 [
                     'label'=>'Descrição imagem Logo do Header',
                     'section' => 'up_header_section',
-                    'settings' => 'up_desc_logo_header'
+                    'settings' => 'up_desc_logo_header',
+                    'type' => 'text'
                 ]
         )
     );

@@ -62,7 +62,7 @@ function up_footer_customizer( $wp_customize ) {
         )
     );
     $wp_customize->add_control(
-        new WP_Customize_Image_Control (
+        new WP_Customize_Control (
             $wp_customize,
 
             'up_desc_logo_footer',
@@ -70,6 +70,7 @@ function up_footer_customizer( $wp_customize ) {
                 'label' => 'Descrição imagem Logo do Footer',
                 'section' => 'up_footer_section',
                 'settings' => 'up_desc_logo_footer',
+                'type' => 'text'
             ]
         )
     );
