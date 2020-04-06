@@ -54,7 +54,7 @@
 
                 <!-- Button Quote -->
                 <?php if(get_theme_mod('up_text_btn_sale') ) : ?>
-                    <a href="#" class="btn-quote">
+                    <a href="<?= get_theme_mod('up_link_btn_sale'); ?>" class="btn-quote">
                         <i class="fas fa-user-tie"></i>
                         <?php echo get_theme_mod('up_text_btn_sale'); ?>
                     </a>
@@ -70,12 +70,10 @@
 
                 <nav class="navbar navbar-expand-lg navbar-light">
                 
-                    
-        
                     <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarSupportedContent">
 
                     <?php
-                        if( has_nav_menu ('main-menu-left') || has_nav_menu('main-menu-right') ) {
+                        if( has_nav_menu ('main-menu-left') ) {
                             wp_nav_menu(array(
                                 'theme_location' => 'main-menu-left',
                                 'fallback_cb' => false,
@@ -113,34 +111,32 @@
                     <button class="navbar-toggler order-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <?php 
-                    $img_logo = get_template_directory_uri() . '/public/images/logo.png';
-                        if(get_theme_mod('up_logo_header') ) : 
-                    ?>
-                        <a class="navbar-brand m-auto order-1 order-lg-2" href="<?php bloginfo(url);?> ">
-                            <img src="<?php echo $img_logo ?> " class='img-fluid' alt="Logo Empresa" <?php echo get_theme_mod('up_logo_header'); ?>>
-                        </a>
-                    <?php endif; ?>
+
+                        <?php 
+                            $img_logo = get_theme_mod('up_logo_header') ;
+                                if(get_theme_mod('up_logo_header') ) : 
+                        ?>
+                            <a class="navbar-brand m-auto order-1 order-lg-2" href="<?php bloginfo('url');?> ">
+                                <img src="<?= $img_logo ?> " class='' alt="Logo Empresa">
+                            </a>
+                        <?php endif; ?>
+                    <!-- end Logo -->
 
 
                     <div class="collapse navbar-collapse order-4 order-lg-3" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-        
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pages <span class="sr-only">(current)</span></a>
-                            </li>
-        
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Shop</a>
-                            </li>
-        
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-        
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
+
+                            <?php
+                                if( has_nav_menu ('main-menu-right') ) {
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'main-menu-right',
+                                        'fallback_cb' => false,
+                                        'container_class' => null,
+                                        'container_id' => 'navbarResponsive',
+                                        'menu_class' => 'navbar-nav'
+                                    ));
+                                }
+                            ?>
         
                         </ul>
                     </div>

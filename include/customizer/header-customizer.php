@@ -11,6 +11,7 @@ function up_header_customizer( $wp_customize ) {
     $wp_customize->add_setting('up_link_googlemaps_address', ['default' => '']);
     $wp_customize->add_setting('up_text_address', ['default' => '']);
     $wp_customize->add_setting('up_text_btn_sale', ['default' => '']);
+    $wp_customize->add_setting('up_link_btn_sale', ['default' => '']);
     
         // Row Center Header
     $wp_customize->add_setting('up_logo_header', ['default' => '']);
@@ -92,6 +93,20 @@ function up_header_customizer( $wp_customize ) {
                 ]
         )
     );
+    // Botão Atendimento Header Topo
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+
+            'up_link_btn_sale',
+                [
+                    'label'=>'Link do Botão Atendimento',
+                    'section' => 'up_header_section',
+                    'settings' => 'up_link_btn_sale',
+                    'type' => 'text'
+                ]
+        )
+    );
 
     $wp_customize->add_control(
         new WP_Customize_Control(
@@ -106,6 +121,7 @@ function up_header_customizer( $wp_customize ) {
                 ]
         )
     );
+ 
 
     // Logo 
     $wp_customize->add_control(
