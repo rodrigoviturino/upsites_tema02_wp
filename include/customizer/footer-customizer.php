@@ -67,7 +67,7 @@ function up_footer_customizer( $wp_customize ) {
 
             'up_desc_logo_footer',
             [
-                'label' => 'Logo Descrição Imagem Footer',
+                'label' => 'Descrição imagem Logo do Footer',
                 'section' => 'up_footer_section',
                 'settings' => 'up_desc_logo_footer',
             ]

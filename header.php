@@ -117,7 +117,7 @@
                                 if(get_theme_mod('up_logo_header') ) : 
                         ?>
                             <a class="navbar-brand m-auto order-1 order-lg-2" href="<?php bloginfo('url');?> ">
-                                <img src="<?= $img_logo ?> " class='' alt="Logo Empresa">
+                                <img src="<?= $img_logo ?> " class='' alt="<?php echo get_theme_mod('up_desc_logo_header'); ?> ">
                             </a>
                         <?php endif; ?>
                     <!-- end Logo -->

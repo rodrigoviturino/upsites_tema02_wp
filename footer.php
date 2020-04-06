@@ -10,7 +10,7 @@
                             if(get_theme_mod('up_logo_footer') ) : 
                     ?>
                         <a class="logo" href="<?php bloginfo('url');?> ">
-                            <img src="<?= $img_logo ?> " class='img-fluid' alt="<?php echo get_theme_mod('up_desc_logo_footer') ?> ">
+                            <img src="<?= $img_logo ?> " class='img-fluid' alt="<?php echo get_theme_mod('up_desc_logo_footer'); ?> ">
                         </a>
                     <?php endif; ?>
 
