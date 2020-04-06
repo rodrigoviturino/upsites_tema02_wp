@@ -5,16 +5,14 @@
             <div class="col-md-6">
 
                 <div class="footer-wrapper-about">
-                        <?php 
-                            $img_logo = get_theme_mod('up_logo_footer') ;
-                                if(get_theme_mod('up_logo_footer') ) : 
-                        ?>
-                            <a class="logo" href="<?php bloginfo('url');?> ">
-                                <img src="<?= $img_logo ?> " class='img-fluid' alt="Logo Empresa" alt="<?php echo get_theme_mod('up_desc_logo_footer') ?> ">
-                            </a>
-                        <?php endif; ?>
-
-
+                    <?php 
+                        $img_logo = get_theme_mod('up_logo_footer') ;
+                            if(get_theme_mod('up_logo_footer') ) : 
+                    ?>
+                        <a class="logo" href="<?php bloginfo('url');?> ">
+                            <img src="<?= $img_logo ?> " class='img-fluid' alt="<?php echo get_theme_mod('up_desc_logo_footer') ?> ">
+                        </a>
+                    <?php endif; ?>
 
 
                     <?php if(get_theme_mod('up_text_about_footer') ) : ?>
