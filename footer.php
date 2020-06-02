@@ -173,6 +173,7 @@
 </footer>
 <!-- end Footer -->
 
+<?php wp_footer(); ?>
 
 <script>
 let menu = document.querySelector('.header__rowBottom');
@@ -189,8 +190,6 @@ window.addEventListener('scroll', () => {
 });
 
 </script>
-
-<?php wp_footer(); ?>
 
 <style type="text/css">
 
